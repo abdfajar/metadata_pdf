@@ -19,7 +19,7 @@ def get_outline_analysis(text, kunci):
     prompt = (
         "Diberikan isi dokumen berikut, ekstrak struktur atau outline dokumen secara hierarkis. "
         "Tampilkan daftar judul utama, bab, subbab, dan sub-subbab bila ada. "
-        "Gunakan format markdown dan batasi output maksimal 1000 kata.\n\n"
+        "Gunakan format markdown dan batasi output maksimal 10000 kata.\n\n"
         f"{text[:6000]}"
     )
 
