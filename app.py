@@ -59,3 +59,4 @@ if st.button("🚀 Proses Metadata"):
         with st.spinner("🔍 Menganalisis metadata dokumen..."):
             hasil = analisis_metadata_dokumen(file, kunci)
             st.text_area("📌 Hasil Metadata", hasil, height=300)
+            st.markdown(hasil, unsafe_allow_html=True)
