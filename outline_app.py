@@ -18,7 +18,8 @@ def get_outline_analysis(text, kunci):
     client = OpenAI(api_key=kunci)
     prompt = (
         "Diberikan isi dokumen berikut, ekstrak struktur atau outline dokumen secara hierarkis. "
-        "Tampilkan daftar judul utama, bab, subbab, dan sub-subbab bila ada.\n\n"
+        "Tampilkan daftar judul utama, bab, subbab, dan sub-subbab bila ada. "
+        "Gunakan format markdown dan batasi output maksimal 1000 kata.\n\n"
         f"{text[:6000]}"
     )
 
@@ -62,4 +63,4 @@ if st.button("🚀 Proses Outline"):
     else:
         with st.spinner("🔍 Mengekstrak struktur dokumen..."):
             hasil = analisis_outline_dokumen(file, kunci)
-            st.text_area("🧱 Hasil Outline Dokumen", hasil, height=400)
+            st.markdown(hasil, unsafe_allow_html=True)
