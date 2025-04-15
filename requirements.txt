@@ -2,3 +2,5 @@ gradio
 openai 
 python-docx 
 pymupdf
+pandasai
+matplotlib
